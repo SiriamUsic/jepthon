@@ -62,7 +62,7 @@ class NewMessage(events.NewMessage):
                 is_admin = event.chat.admin_rights
 
             if not is_creator and not is_admin:
-                text = "`أحتاج إلى صلاحيات الاشراف حتى أتمكن من استخدام هذا الأمر!`"
+                text = "`I need admin rights to be able to use this command!`"
 
                 event._client.loop.create_task(edit_or_reply(event, text))
                 return
@@ -215,7 +215,7 @@ async def send_message(
                 comment_to=comment_to,
             )
         msglink = await client.get_msg_link(response)
-        msg = f"__آسف، لا يمكنني إرسال هذه الرسالة في الدردشات العامة، فقد تحتوي على بعض البيانات الحساسة، لذا تحقق من ذلك __[مجموعة سجل البوت]({msglink})."
+        msg = f"__Sorry I can't send this message in public chats it may have some sensitive data So check in __[Bot log group]({msglink})."
         return await client.sendmessage(
             entity=chatid,
             message=msg,
@@ -368,7 +368,7 @@ async def send_file(
                 **kwargs,
             )
         msglink = await client.get_msg_link(response)
-        msg = f"__آسف، لا يمكنني إرسال هذه الرسالة في الدردشات العامة، فقد تحتوي على بعض البيانات الحساسة، لذا تحقق من ذلك __[مجموعة لوك البوتة]({msglink})."
+        msg = f"__Sorry I can't send this message in public chats it may have some sensitive data So check in __[Bot log group]({msglink})."
         return await client.sendmessage(
             entity=chatid,
             message=msg,
@@ -467,7 +467,7 @@ async def edit_message(
                 schedule=schedule,
             )
         msglink = await client.get_msg_link(response)
-        msg = f"__آسف، لا يمكنني إرسال هذه الرسالة في الدردشات العامة، فقد تحتوي على بعض البيانات الحساسة، لذا تحقق من ذلك __[بمجموعة لوك البوت]({msglink})."
+        msg = f"__Sorry I can't send this message in public chats it may have some sensitive data So check in __[Bot log group]({msglink})."
         return await client.editmessage(
             entity=chatid,
             message=message,
