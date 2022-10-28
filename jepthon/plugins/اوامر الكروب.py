@@ -69,7 +69,7 @@ async def event(vois):
     if jpvois2:
         await vois.client.send_file(vois.chat_id, jpvois2, reply_to=Ti)
         await vois.delete()
-@jepiq.on(admin_cmd(outgoing=True, pattern="احب العراق$"))
+@jepiq.on(admin_cmd(outgoing=True, pattern="احب مصر$"))
 async def event(vois):
     if vois.fwd_from:
         return

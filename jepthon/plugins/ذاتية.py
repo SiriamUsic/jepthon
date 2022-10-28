@@ -13,9 +13,9 @@ async def dato(event):
         pic,
         caption=f"""
 - تـم حفظ الصـورة بنجـاح ✓ 
-- غير مبري الذمه اذا استخدمت الامر للابتزاز
-- CH: @Jepthon
-- Dev: @lMl10l
+- مليش ذنب لو استخدمت الامر للابتزاز
+- CH: @SR_TeleGod
+- Dev: @Salah_officiall
   """,
     )
     await event.delete()

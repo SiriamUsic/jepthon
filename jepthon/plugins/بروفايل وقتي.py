@@ -137,7 +137,7 @@ async def digitalgrouppicloop():
             os.remove(auto_group_photo_path)
             await asyncio.sleep(60)
         except ChatAdminRequiredError:
-            return await jepiq.tgbot.send_message(BOTLOG_CHATID, "**يجب ان يكون لديك صلاحية تغيير صورة الكروب لتغيير صورة الكروب الوقتية •**")
+            return await jepiq.tgbot.send_message(BOTLOG_CHATID, "**يجب ان يكون لديك صلاحية تغيير صورة الجروب لتغيير صورة الجروب الوقتية •**")
         except ChannelInvalidError:
             return
         except FloodWaitError:
@@ -165,7 +165,7 @@ async def group_loop():
                 title=name
             ))
         except ChatAdminRequiredError:
-            await jepiq.tgbot.send_message(BOTLOG_CHATID, "**يجب ان يكون لديك صلاحية تغيير اسم الكروب لتفعيل وقتي الكروب•**")
+            await jepiq.tgbot.send_message(BOTLOG_CHATID, "**يجب ان يكون لديك صلاحية تغيير اسم الجروب لتفعيل وقتي الجروب•**")
         except ChannelInvalidError:
             return
         except FloodWaitError:
@@ -226,31 +226,31 @@ async def _(event):
     await edit_delete(event, "**تم تفـعيل الصـورة الـوقتية بنجـاح ✓**")
     await digitalpicloop()
 
-@jepiq.on(admin_cmd(pattern="كروب وقتي"))
+@jepiq.on(admin_cmd(pattern="جروب وقتي"))
 async def _(event):
     ison = get_auto_g()
     if event.is_group or event.is_channel:
         if ison is not None and ison == str(event.chat_id):
-            return await edit_delete(event, "**الاسم الوقتي شغال للكروب/القناة**")
+            return await edit_delete(event, "**الاسم الوقتي شغال للجروب/القناة**")
         chid = event.chat_id
         auto_g(str(chid))
-        await edit_delete(event, "**تم تفـعيل الاسـم الوقتي للقناة/الكروب ✓**")
+        await edit_delete(event, "**تم تفـعيل الاسـم الوقتي للقناة/الجروب ✓**")
         await group_loop()
     else:
-        return await edit_delete(event, "**يمكنك استعمال الاسم الوقتي في الكروب او في القناة فقط**")
+        return await edit_delete(event, "**يمكنك استعمال الاسم الوقتي في الجروب او في القناة فقط**")
 
-@jepiq.on(admin_cmd(pattern="كروب صورة وقتي"))
+@jepiq.on(admin_cmd(pattern="جروب صورة وقتي"))
 async def _(event):
     ison = gvarstatus("digitalgrouppic")
     if event.is_group or event.is_channel:
         if ison is not None and ison == str(event.chat_id):
-            return await edit_delete(event, "**الصورة الوقتية شغالة للكروب/القناة**")
+            return await edit_delete(event, "**الصورة الوقتية شغالة للجروب/القناة**")
         chid = event.chat_id
         addgvar("digitalgrouppic", str(chid))
-        await edit_delete(event, "**تم تفعيل الصورة الوقتية للكروب/ القناة ✓**")
+        await edit_delete(event, "**تم تفعيل الصورة الوقتية للجروب/ القناة ✓**")
         await digitalgrouppicloop()
     else:
-        return await edit_delete(event, "**يمكنك استعمال الصورة الوقتية في كروب او قناة**")
+        return await edit_delete(event, "**يمكنك استعمال الصورة الوقتية في جروب او قناة**")
 
 @jepiq.on(admin_cmd(pattern=f"{namew8t}(?:\s|$)([\s\S]*)"))
 async def _(event):
@@ -305,22 +305,22 @@ async def _(event):  # sourcery no-metrics
             )
             return await edit_delete(event, "**  تم ايقاف البايو الوقـتي بنـجاح ✓**")
         return await edit_delete(event, "**لم يتم تفعيل البايو الوقتي 🧸♥**")
-    if input_str == "كروب صورة وقتي":
+    if input_str == "جروب صورة وقتي":
         if gvarstatus("digitalgrouppic") is not None:
             delgvar("digitalgrouppic")
-            return await edit_delete(event, "**  تم ايقاف صورة الكروب الوقتية بنجاح ✓**")
-        return await edit_delete(event, "**لم يتم تفعيل صورة الكروب/ القناة الوقتية بالأصل**")
-    if input_str == "كروب وقتي":
+            return await edit_delete(event, "**  تم ايقاف صورة الجروب الوقتية بنجاح ✓**")
+        return await edit_delete(event, "**لم يتم تفعيل صورة الجروب/ القناة الوقتية بالأصل**")
+    if input_str == "جروب وقتي":
         if get_auto_g() is not None:
             del_auto_g()
-            return await edit_delete(event, "** تـم ايقاف الاسم الوقتي للكروب/القناة ✓**")
-        return await edit_delete(event, "** لم يتم تفعيل الاسم الوقتي للكروب/القناة بالأصل **")
+            return await edit_delete(event, "** تـم ايقاف الاسم الوقتي للجروب/القناة ✓**")
+        return await edit_delete(event, "** لم يتم تفعيل الاسم الوقتي للجروب/القناة بالأصل **")
     END_CMDS = [
         "الصورة الوقتية",
         "اسم وقتي",
         "بايو وقتي",
-        "كروب وقتي",
-        "كروب صورة وقتي",
+        "جروب وقتي",
+        "جروب صورة وقتي",
     ]
     if input_str not in END_CMDS:
         await edit_delete(

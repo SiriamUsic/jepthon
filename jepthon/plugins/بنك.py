@@ -40,7 +40,7 @@ async def td(event):
 async def d(message):
     users = des_bank()
     if not users:
-        return edit_or_reply(message, "لا يوجد حسابات في المصرف")
+        return edit_or_reply(message, "لا يوجد حسابات في البنك")
     list = '**قائمة اغنى عشرة**\n'
     count = 0
     for i in users:
@@ -72,11 +72,11 @@ async def start(event):
 
 👋  {me.first_name} مرحبًا
  ━━━━━━━━━━━━━━━━━
-- لأنشاء حساب اختر احد المصاريف الاتية
+- لأنشاء حساب اختر احد البنوك الاتية
 
-- .انشاء حساب الجوكر الاسلامي  
+- .انشاء حساب تلي جود
 
-- .انشاء حساب الرافدين
+- .انشاء حساب مصر
  ━━━━━━━━━━━━━━━━━
 
 </strong>""",parse_mode="html")
@@ -95,7 +95,7 @@ async def a(message):
 
 
 
-@jepiq.on(admin_cmd(pattern="(بنكي|مصرفي) ?(.*)"))
+@jepiq.on(admin_cmd(pattern="(بنكي|حسابي) ?(.*)"))
 async def myb(message):
 
     me = await message.client.get_me()
@@ -110,7 +110,7 @@ async def myb(message):
 • الاسم : {nn} 
 • رقم الحساب : {me.id} 
 • الاموال : {balance} 💵
-• اسم المصرف : {ba} 
+• اسم البنك : {ba} 
 - ================= -
           """
          acinfo = await edit_or_reply(message,f"<strong>{ifn}</strong>",parse_mode="html")
@@ -131,16 +131,16 @@ async def ga(message):
         help = """
 •| قائمة المساعدة |•
 .انشاء حساب (لانشاء حساب مصرفي)
-- مثال: .انشاء حساب الرافدين او الجوكر الاسلامي
+- مثال: .انشاء حساب مصر او تلي جود
 1- .استثمار (مبلغ) 
 - مثال : استثمار 18276
 2- .حظ (المبلغ)
 - مثال : حظ 17267
 3- .راتب
 4- .كنز
-5- .بخشيش
+5- .بقشيش
 6- .فلوسي | لرؤية فلوسك
-7- .بنكي او .مصرفي | لاضهار معلومات حسابك في المصرف
+7- .بنكي او .حسابي | لاظهار معلومات حسابك في المصرف
 8- .مسح حسابي | لحذف حسابك البنكي
       """
 
@@ -151,14 +151,14 @@ async def ga(message):
     if ms == ".كنز":
         if "كنز" in t:
               tii = t["كنز"] - time.time()
-              return await edit_or_reply(message,"<strong> ليس هنالك كنز لقد اخذته بالفعل انتضر {}</strong>".format(convert(tii)),parse_mode="html")
+              return await edit_or_reply(message,"<strong> ما انت لسه لاقي كنز دلوقت اصبر {}</strong>".format(convert(tii)),parse_mode="html")
      
         else:
               rt = randint(50,3000)
               acca = get_bank(mee.id).balance
               ga = int(rt) + int(acca)
               update_bank(mee.id, ga)
-              tx = await edit_or_reply(message,f"<strong>💸 لقد حصلت على الكنز!🤩\n- حصلت على {rt} 💵.\n- اموالك الان : {ga} 💵 .</strong>",parse_mode="html")
+              tx = await edit_or_reply(message,f"<strong>💸 لقيت كنز اهوو يبن المحظوظه!🤩\n- بيعته بـ {rt} جنيه 💵.\n- فلوسك دلوقت : {ga} 💵 .</strong>",parse_mode="html")
               t["كنز"] = time.time() + 600 
               await asyncio.sleep(600)
               del t["كنز"]
@@ -167,12 +167,12 @@ async def ga(message):
         value = message.text.replace(".استثمار","")
         if "استثمار" in t:
             ti2 = t["استثمار"] - time.time()
-            return await edit_or_reply(message,"<strong> للاستثمار مجدداً انتضر {}</strong>".format(convert(ti2)),parse_mode="html")
+            return await edit_or_reply(message,"<strong> مينفعش دلوقت اصبر {}</strong>".format(convert(ti2)),parse_mode="html")
         lss = ["Done","Fail"]
         ls = random.choice(lss)
         ppe = acc.balance
         if int(value) > int(ppe):
-            return await edit_delete(message, "<strong>! انت لا تملك هذا القدر من الاموال للاستثمار</strong>", parse_mode="html")
+            return await edit_delete(message, "<strong>! فلوسك اقل من المبلغ دا</strong>", parse_mode="html")
         #isv = value.isnumeric()
         #if not isv:
          #    return await edit_delete(message, "<strong>!ادخل رقم صالِح للاستثمار</strong>", parse_mode="html")
@@ -186,14 +186,14 @@ async def ga(message):
 • استثمار ناجح  💰
 • نسبة الربح  ↢ {ra}
 • مبلغ الربح  ↢ ( {ppe} 💵 )
-• اموالك الان  ↢ ( {kf}  💵 )
+• فلوسك دلوقت  ↢ ( {kf}  💵 )
 ===================
 </strong>""",parse_mode="html")
             t["استثمار"] = time.time() + 600
             await asyncio.sleep(600)
             del t["استثمار"]
         if "Fail" in ls:
-             await edit_or_reply(message, "استثمار فاشل لم تحصل على اي ارباح")
+             await edit_or_reply(message, "استثمار فاشل يبن الفاشله مكسبتش حاجه")
              t["استثمار"] = time.time() + 600
              await asyncio.sleep(600)
              del t["استثمار"]
@@ -204,10 +204,10 @@ async def ga(message):
         ppe = acc.balance
         if "حظ" in t:
             ti2 = t["حظ"] - time.time()
-            return await edit_or_reply(message,"<strong> للعب الحظ مجدداً انتضر {}</strong>".format(convert(ti2)),parse_mode="html")
+            return await edit_or_reply(message,"<strong> مينفعش تلعب الحظ دلوقت اصبر {}</strong>".format(convert(ti2)),parse_mode="html")
 
         if int(value) > int(ppe):
-            return await edit_delete(message, "<strong>! انت لا تملك هذا القدر من الاموال للحظ</strong>", parse_mode="html")
+            return await edit_delete(message, "<strong>! فلوسك اقل من المبلغ دا</strong>", parse_mode="html")
         ls = ["Done","Fail"]
         sv = random.choice(ls)
         if "Done" in sv:
@@ -216,9 +216,9 @@ async def ga(message):
             update_bank(mee.id, kf)
             cong = await edit_or_reply(message,f"""<strong>          
 ======================
-• مبارك لقد ربحت بالحظ
-• اموالك السابقة  ↢ ( {ppe}  💵 ) .
-• اموالك الان  ↢ ( {kf}  💵 ) .
+• مبروك كسبت يبن المحظوظه
+• فلوسك كانت  ↢ ( {ppe}  💵 ) .
+•  فلوسك دلوقت  ↢ ( {kf}  💵 ) .
 ======================
 </strong>""",parse_mode="html")
             t["حظ"] = time.time() + 600
@@ -230,34 +230,34 @@ async def ga(message):
             update_bank(mee.id, pop)
             heh = await edit_or_reply(message,f"""<strong>
 =======================
-• لسوء الحظ , خسرت في الحظ 
-• اموالك السابقة  ↢ ( {pa} 💵 ) .
-• اموالك الان  ↢ ( {pop} 💵 ) .
+• خسرت يا منحووس 
+• فلوسك كانت  ↢ ( {pa} 💵 ) .
+• فلوسك دلوقت  ↢ ( {pop} 💵 ) .
 ========================
 </strong>""",parse_mode="html")
 
             t["حظ"] = time.time() + 600
             await asyncio.sleep(600)
             del t["حظ"]
-    if ms == ".بخشيش":
+    if ms == ".بقشيش":
         ppe = acc.balance
-        if "بخشيش" in t:
-            ti2 = t["بخشيش"] - time.time()
-            return await edit_or_reply(message,"<strong> لقد اخذت بخشيش انتضر {}</strong>".format(convert(ti2)),parse_mode="html")
+        if "بقشيش" in t:
+            ti2 = t["بقشيش"] - time.time()
+            return await edit_or_reply(message,"<strong> ما انا لسه عاطيلك بقشيش دلوقت هي شغلانه {}</strong>".format(convert(ti2)),parse_mode="html")
         else:
               rt = randint(70,2000)
               ga = int(rt) + int(ppe)
-              tp = await edit_or_reply(message,f"<strong>=================\n- •تم ايداع البخشيش 💸\n- • حصلت على  {rt} 💵.\n- • أموالك الان : {ga} 💵\n=================</strong>",parse_mode="html")
+              tp = await edit_or_reply(message,f"<strong>=================\n- • خد دول {rt} علشانك احلى مسا عليك.\n- • فلوسك دلوقت : {ga} 💵\n=================</strong>",parse_mode="html")
               update_bank(mee.id, ga)
-              t["بخشيش"] = time.time() + 600
+              t["بقشيش"] = time.time() + 600
               await asyncio.sleep(600)
-              del t["بخشيش"]
+              del t["بقشيش"]
     
     if ms == ".راتب":
         ba = acc.balance
         if "راتب" in t:
             ti2 = t["راتب"] - time.time()
-            return await edit_or_reply(message,"<strong> لأخذ راتب مجدداً انتضر {}</strong>".format(convert(ti2)),parse_mode="html")
+            return await edit_or_reply(message,"<strong> مينفعش تاخد رات دلوقت اصبر {}</strong>".format(convert(ti2)),parse_mode="html")
 
         else:
 
@@ -269,7 +269,7 @@ async def ga(message):
               ratb = rt.split("-")[1]
               ga = int(ratb) + int(ba)
               update_bank(mee.id, ga)
-              sal = await edit_or_reply(message,f"<strong>==================\n- • تم ايداع راتبك! 💸🤩\n- • حصلت على {ratb} 💵\n- • لأنك {name}.\n- • اموالك الان : {ga} 💵 \n==================</strong>",parse_mode="html")
+              sal = await edit_or_reply(message,f"<strong>==================\n- • راتبك نزل ينجم ! 💸🤩\n- • خدت {ratb} 💵\n- • لأنك {name}.\n- • فلوسك دلوقت : {ga} 💵 \n==================</strong>",parse_mode="html")
               t["راتب"] = time.time() + 600
               await asyncio.sleep(600)
               del t["راتب"]
@@ -285,16 +285,16 @@ async def thief(message):
     acc = get_bank(mee.id)
     if "اسرق" in t:
         ti2 = t["اسرق"] - time.time()
-        return await edit_or_reply(message,"<strong> لقد سرقت قبل قليل انتظر {}</strong>".format(convert(ti2)),parse_mode="html")
+        return await edit_or_reply(message,"<strong> انت لسه سارق دلوقت اصبر {}</strong>".format(convert(ti2)),parse_mode="html")
     else:
         if not user:
-            return await edit_or_reply(message,"<strong> يجب عليك الرد على شخص لسرقته </strong>", parse_mode="html")
+            return await edit_or_reply(message,"<strong> رد على الشخص لسرقته </strong>", parse_mode="html")
         if get_bank(user.id) is None:
-            return await edit_or_reply(message,"<strong> لا يمكنك سرقة شخص لا يمتلك حساب مصرفي </strong>", parse_mode="html")
+            return await edit_or_reply(message,"<strong> معندوش حساب بنكي </strong>", parse_mode="html")
         if get_bank(mee.id) is None:
-            return await edit_or_reply(message,"<strong> لا يمكنك السرقة لانك لا تملك حساب مصرفي </strong>", parse_mode="html")
+            return await edit_or_reply(message,"<strong> معندكش حساب بنكي </strong>", parse_mode="html")
         if int(accu.balance) < 5000:
-            return await edit_or_reply(message,"<strong> لا يمكنك سرقته لان امواله اقل من 5000$ </strong>", parse_mode="html")
+            return await edit_or_reply(message,"<strong> فلوسه اقل من 5000$ </strong>", parse_mode="html")
     rt = randint(70,2000)
     ppe = int(acc.balance)
     be = int(accu.balance)
@@ -305,8 +305,8 @@ async def thief(message):
     update_bank(mee.id, ga)
     await jepiq.send_file(
                 message.chat_id,
-                "https://telegra.ph/file/9c4007ca621cc01a3c650.jpg",
-                caption=f"سرق [{jepthon}](tg://user?id={mee.id}) من [{user.first_name}](tg://user?id={user.id})\n المبلغ: {rt} 💵",
+                "https://telegra.ph/file/b2c8c283656698b089920.jpg",
+                caption=f"سرق [{jepthon}](tg://user?id={mee.id}) من [{user.first_name}](tg://user?id={user.id})\n المبلغ : {rt} 💵",
                 )
     t["اسرق"] = time.time() + 600
     await asyncio.sleep(600)
@@ -318,12 +318,12 @@ async def bankar(message):
     input = message.pattern_match.group(1)
     mee = await message.client.get_me()
     if get_bank(mee.id) is not None:
-        return await edit_or_reply(message, f"<strong>لديك حساب مصرفي بالفعل</strong>",parse_mode="html")
-    if input == "الجوكر الاسلامي":
-        bankn = "مصرف الجوكر الاسلامي"
-    elif input == "الرافدين":
-    	bankn = "مصرف الرافدين"
-    elif input != "الرافدين" or "الجوكر الاسلامي":
-         return await edit_or_reply(message, "لا يوجد هكذا مصرِف !")
+        return await edit_or_reply(message, f"<strong>عندك حساب بنكي مينفعش تعمل تاني</strong>",parse_mode="html")
+    if input == "تلي جود":
+        bankn = "بنك تلي جود"
+    elif input == "مصر":
+    	bankn = "بنك مصر"
+    elif input != "مصر" or "تلي جود":
+         return await edit_or_reply(message, "مفيش بنك بالاسم دا !")
     add_bank(mee.id, mee.first_name, 50, bankn)
-    cbs = await edit_or_reply(message,f"<strong>تم انشاء حساب مصرفي بالمعلومات التالية:\nاسم صاحب الحساب:{mee.first_name}|\nايدي الحساب:{mee.id}|\nاسم المصرف:{bankn}|\nالاموال المودعة:50$</strong>", parse_mode="html")
+    cbs = await edit_or_reply(message,f"<strong>عملنالك حساب في البنك معلوماته اهي:\nاسم صاحب الحساب:{mee.first_name}|\nايدي الحساب:{mee.id}|\nاسم البنك:{bankn}|\nفلوس حسابك:50$</strong>", parse_mode="html")

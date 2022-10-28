@@ -113,10 +113,10 @@ async def custom_jepthon(event):
         addgvar("PRIVATE_GROUP_BOT_API_ID", text)
         var = "PRIVATE_GROUP_BOT_API_ID"
     if (
-        input_str == "صورة البنك"
-        or input_str == "صورة بنك"
-        or input_str == "صوره البنك"
-        or input_str == "صوره بنك"
+        input_str == "صورة البينج"
+        or input_str == "صورة بينج"
+        or input_str == "صوره البينج"
+        or input_str == "صوره بينج"
     ):
         urls = extractor.find_urls(reply.text)
         if not urls:

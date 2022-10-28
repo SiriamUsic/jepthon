@@ -1,14 +1,14 @@
-#ترجمه فريق الجوكر على التيلكرام
+#ترجمه فريق جـيبثون على التيلكرام
 import json
 
 import requests
-#ترجمه فريق الجوكر على التيلكرام
+#ترجمه فريق جـيبثون على التيلكرام
 from ..sql_helper.globals import gvarstatus
 from . import jepiq, edit_delete, edit_or_reply
 
 plugin_category = "extra"
 
-#ترجمه فريق الجوكر على التيلكرام
+#ترجمه فريق جـيبثون على التيلكرام
 @jepiq.ar_cmd(
     pattern="صلاة(?: |$)(.*)",
     command=("صلاة", plugin_category),
@@ -26,7 +26,7 @@ async def get_adzan(adzan):
     if request.status_code != 200:
         await edit_delete(
             adzan, f"** لم يـتم العثور على معلومات لـهذه المدينه {LOKASI}**\n يرجى كتابة اسم محافظتك وباللغه الانكليزي ", 5
-        ) #ترجمه فريق الجوكر على التيلكرام
+        ) #ترجمه فريق جـيبثون على التيلكرام
         return
     result = json.loads(request.text)
     jepiqresult = f"<b>اوقـات صـلاه المـسلمين 👳‍♂️ </b>\

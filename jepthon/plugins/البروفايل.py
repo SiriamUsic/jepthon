@@ -224,7 +224,7 @@ async def remove_profilepic(delpfp):
     ]
     await delpfp.client(DeletePhotosRequest(id=input_photos))
     await edit_delete(
-        delpfp, f"᯽︙ تـم الحذف {len(input_photos)} من صور حسابك بنجاح ✅"
+        delpfp, f"᯽︙ تـم حذف {len(input_photos)} من صور حسابك بنجاح ✅"
     )
 
 
@@ -246,4 +246,4 @@ async def _(event):
     )
     await edit_or_reply(event, output_str)
 
-#ملف البروفايل خاص بقناة الجوكر
+#ملف البروفايل خاص بقناة جـيبثون

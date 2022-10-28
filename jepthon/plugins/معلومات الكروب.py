@@ -39,7 +39,7 @@ plugin_category = "utils"
             "{tr}المشرفيـن +إسم المستخـدم/معرّف المستخـدم> ✪",
             "{tr}المشرفيـن + في المجموعـة التي تريدهـا> ✪",
         ],
-        "examples": "{tr}المشرفين @jepiq",
+        "examples": "{tr}المشرفين @khhvvjn",
     },
 )
 async def _(event):
@@ -186,7 +186,7 @@ async def get_users(show):
             "{tr}المعلومـات <username/userid>",
             "{tr}المعلومـات <in group where you need>",
         ],
-        "examples": "{tr}معلومات @JepThon",
+        "examples": "{tr}معلومات @SR_TeleGod",
     },
 )
 async def info(event):

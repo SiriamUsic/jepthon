@@ -3,7 +3,7 @@ from ..Config import Config
 from ..sql_helper.globals import gvarstatus
 from JepIQ.razan.resources.mybot import *
 
-ROZ_PIC = "https://telegra.ph/file/d94c222c321f6d3352842.jpg"
+ROZ_PIC = "https://telegra.ph/file/b2c8c283656698b089920.jpg"
 
 if Config.TG_BOT_USERNAME is not None and tgbot is not None:
     @tgbot.on(events.InlineQuery)
@@ -13,13 +13,13 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         query = event.text
         await bot.get_me()
         if query.startswith("السورس") and event.query.user_id == bot.uid:
-            buttons = [[Button.url("1- شرح التنصيب", "https://youtu.be/ATAgbLGzr7w"), Button.url("2- استخراج ايبيات", "https://my.telegram.org/"),],[Button.url("3- ستخراج تيرمكس", "https://replit.com/@lMl10l/CodeMusic?lite=1&outputonly=1"), Button.url("4- بوت فاذر", "http://t.me/BotFather"),],[Button.url("5- رابط التنصيب", "https://heroku.com/deploy?template=https://github.com/jepthoniq/lMl10l"),],[Button.url("المطـور 👨🏼‍💻", "https://t.me/lMl10l"),]]
+            buttons = [[Button.url("قناة السورس", "https://t.me/sr_TeleGod"),],[Button.url("مبرمج السورس", "https://t.me/Salah_officiall"),]]
             if ROZ_PIC and ROZ_PIC.endswith((".jpg", ".png", "gif", "mp4")):
                 result = builder.photo(ROZ_PIC, text=ROZ, buttons=buttons, link_preview=False)
             elif ROZ_PIC:
                 result = builder.document(ROZ_PIC,title="Jepthon",text=ROZ,buttons=buttons,link_preview=False)
             else:
-                result = builder.article(title="Jepthon",text=ROZ,buttons=buttons,link_preview=False)
+                result = builder.article(title="TeleGod",text=ROZ,buttons=buttons,link_preview=False)
             await event.answer([result] if result else None)
 @bot.on(admin_cmd(outgoing=True, pattern="السورس"))
 async def repo(event):

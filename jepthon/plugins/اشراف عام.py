@@ -43,7 +43,7 @@ async def get_full_user(event):
         try:
             user_obj = await event.client.get_entity(user)
         except Exception as err:
-            return await event.edit("▾∮ هنالك خطأ يرجى تبليغنا @JepThon", str(err))           
+            return await event.edit("▾∮ هنالك خطأ يرجى تبليغنا @sr_TeleGod", str(err))           
     return user_obj, extra
 
 global hawk,moth
@@ -84,7 +84,7 @@ async def gben(jepthon):
         if not rank:
             rank = "ㅤㅤ"
     except:
-        return await razan.edit(f"**▾∮ هنالك شي خطأ**")
+        return await razan.edit(f"**▾∮ هناك خطأ**")
     if user:
         telchanel = [d.entity.id
                      for d in await jepthon.client.get_dialogs()
@@ -135,7 +135,7 @@ async def gben(jepthon):
         if not rank:
             rank = "ㅤㅤ"
     except:
-        return await razan.edit(f"**▾∮ هنالك شي خطأ**")
+        return await razan.edit(f"**▾∮ هناك خطأ**")
     if user:
         telchanel = [d.entity.id
                      for d in await jepthon.client.get_dialogs()

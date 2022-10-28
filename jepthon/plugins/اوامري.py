@@ -10,7 +10,7 @@ from ..core import check_owner
 from ..Config import Config
 
 JEP_IC = "https://telegra.ph/file/762989c65df81fc2e96d7.jpg"
-ROE = "**♰ هـذه هي قائمة اوامـر سـورس الجوكر ♰**"
+ROE = "**♰ هـذه هي قائمة اوامـر سـورس تلي جود ♰**"
 
 if Config.TG_BOT_USERNAME is not None and tgbot is not None:
 
@@ -60,14 +60,14 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
             elif JEP_IC:
                 result = builder.document(
                     JEP_IC,
-                    title="JEPTHON",
+                    title="TeleGod",
                     text=ROE,
                     buttons=buttons,
                     link_preview=False,
                 )
             else:
                 result = builder.article(
-                    title="JEPTHON",
+                    title="TeleGod",
                     text=ROE,
                     buttons=buttons,
                     link_preview=False,

@@ -30,13 +30,13 @@ def weird_division(n, d):
 
 
 @jepiq.ar_cmd(
-    pattern="تخزين الكروب(?:\s|$)([\s\S]*)",
-    command=("تخزين الكروب", plugin_category),
+    pattern="تخزين الجروب(?:\s|$)([\s\S]*)",
+    command=("تخزين الجروب", plugin_category),
     info={
         "header": "Shows you the complete media/file summary of the that group.",
         "description": "As of now limited to last 10000 in the group u used",
-        "usage": "{tr}تخزين الكروب <المعرف/الايدي>",
-        "examples": "{tr}تخزين الكروب @catuserbot_support",
+        "usage": "{tr}تخزين الجروب <المعرف/الايدي>",
+        "examples": "{tr}تخزين الجروب @catuserbot_support",
     },
 )
 async def _(event):  # sourcery no-metrics
@@ -190,7 +190,7 @@ async def _(event):  # sourcery no-metrics
         link = f"<a href='tg://user?id={chatdata.id}'>{chatdata.first_name}</a>"
     catevent = await edit_or_reply(
         event,
-        f"<code>عدد الملفات وحجم الملف من </code>{_format.htmlmentionuser(userdata.first_name,userdata.id)}<code> فـي الـكروب </code><b>{link}</b>\n<code>ربـما تأخـذ بعـض الوقـت تعـتمد عـلى عـدد رسـائل المـستـخدم</code>",
+        f"<code>عدد الملفات وحجم الملف من </code>{_format.htmlmentionuser(userdata.first_name,userdata.id)}<code> فـي الـجروب </code><b>{link}</b>\n<code>ربـما تأخـذ بعـض الوقـت تعـتمد عـلى عـدد رسـائل المـستـخدم</code>",
         parse_mode="HTML",
     )
 

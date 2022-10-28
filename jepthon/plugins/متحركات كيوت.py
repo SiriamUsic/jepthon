@@ -6,7 +6,7 @@ from jepthon import jepiq
 from . import *
 
 #edit  ~ @lMl10l for jepiq 
-#جميع الحقوق محفوظة لسـورس الجوكر تخـمط تبيـن فشلـك
+#جميع الحقوق محفوظة لسـورس جـيبثون تخـمط تبيـن فشلـك
 
 
 plugin_category = "extra"
@@ -25,7 +25,7 @@ async def tmgif(event):
         await event.client.send_file(event.chat_id, cute, caption=jepiq, reply_to=ROZ)
 
 #edit  ~ @lMl10l for jepiq 
-#جميع الحقوق محفوظة لسـورس الجوكر تخـمط تبيـن فشلـك
+#جميع الحقوق محفوظة لسـورس جـيبثون تخـمط تبيـن فشلـك
 
 @jepiq.ar_cmd(
     pattern="ك2$",
@@ -42,7 +42,7 @@ async def tmgif(event):
         await event.client.send_file(event.chat_id, cute2, caption=RAZAN, reply_to=leo)
 
 #edit  ~ @lMl10l for jepiq 
-#جميع الحقوق محفوظة لسـورس الجوكر تخـمط تبيـن فشلـك
+#جميع الحقوق محفوظة لسـورس جـيبثون تخـمط تبيـن فشلـك
 
 @jepiq.ar_cmd(
     pattern="ك3$",
@@ -59,7 +59,7 @@ async def tmgif(event):
         await event.client.send_file(event.chat_id, cute3, caption=RAZAN, reply_to=sic_id)
 
 #edit  ~ @lMl10l for jepiq 
-#جميع الحقوق محفوظة لسـورس الجوكر تخـمط تبيـن فشلـك
+#جميع الحقوق محفوظة لسـورس جـيبثون تخـمط تبيـن فشلـك
 
 @jepiq.ar_cmd(
     pattern="ك4$",
@@ -78,7 +78,7 @@ async def tmgif(event):
         )
 
 #edit  ~ @lMl10l for jepiq 
-#جميع الحقوق محفوظة لسـورس الجوكر تخـمط تبيـن فشلـك
+#جميع الحقوق محفوظة لسـورس جـيبثون تخـمط تبيـن فشلـك
 
 @jepiq.ar_cmd(
     pattern="ك5$",
@@ -98,7 +98,7 @@ async def tmgif(event):
         )
 
 #edit  ~ @lMl10l for jepiq 
-#جميع الحقوق محفوظة لسـورس الجوكر تخـمط تبيـن فشلـك
+#جميع الحقوق محفوظة لسـورس جـيبثون تخـمط تبيـن فشلـك
 
 @jepiq.ar_cmd(
     pattern="ك6$",
@@ -118,7 +118,7 @@ async def tmgif(event):
         )
 
 #edit  ~ @lMl10l for jepiq 
-#جميع الحقوق محفوظة لسـورس الجوكر تخـمط تبيـن فشلـك
+#جميع الحقوق محفوظة لسـورس جـيبثون تخـمط تبيـن فشلـك
 
 @jepiq.ar_cmd(
     pattern="ك7$",
@@ -138,4 +138,4 @@ async def tmgif(event):
     
        
 #edit  ~ @lMl10l for jepiq 
-#جميع الحقوق محفوظة لسـورس الجوكر تخـمط تبيـن فشلـك   
+#جميع الحقوق محفوظة لسـورس جـيبثون تخـمط تبيـن فشلـك   
