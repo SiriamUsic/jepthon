@@ -24,7 +24,7 @@ LOGS = logging.getLogger(__name__)
             "{tr}رسالة <username/chatid/chatusername> او بالرد على الرسالة",
             "{tr}رسالة <username/userid/chatid/chatusername> <text>",
         ],
-        "examples": "{tr}رسالة @SR_TeleGod حي الله العربان",
+        "examples": "{tr}رسالة @JAVA_tlethon صلي ع النبي",
     },
 )
 async def catbroadcast_add(event):

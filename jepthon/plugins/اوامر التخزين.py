@@ -84,7 +84,7 @@ async def log_tagged_messages(event):
     except Exception as e:
         LOGS.info(str(e))
     messaget = media_type(event)
-    resalt = f"#التــاكــات\n\n<b>⌔┊الكــروب : </b><code>{hmm.title}</code>"
+    resalt = f"#التــاكــات\n\n<b>⌔┊الجروب : </b><code>{hmm.title}</code>"
     if full is not None:
         resalt += (
             f"\n\n<b>⌔┊المـرسـل : </b> {_format.htmlmentionuser(full.first_name , full.id)}"
@@ -124,9 +124,9 @@ async def log(log_text):
             textx = user + log_text.pattern_match.group(1)
             await log_text.client.send_message(Config.PM_LOGGER_GROUP_ID, textx)
         else:
-            await log_text.edit("**⌔┊بالــرد على اي رسـاله لحفظهـا في كـروب التخــزين**")
+            await log_text.edit("**⌔┊بالــرد على اي رسـاله لحفظهـا في جروب التخــزين**")
             return
-        await log_text.edit("**⌔┊تـم الحفـظ في كـروب التخـزين .. بنجـاح ✓**")
+        await log_text.edit("**⌔┊تـم الحفـظ في جـروب التخـزين .. بنجـاح ✓**")
     else:
         await log_text.edit("**⌔┊عـذراً .. هـذا الامـر يتطلـب تفعيـل فـار التخـزين اولاً**")
     await asyncio.sleep(2)

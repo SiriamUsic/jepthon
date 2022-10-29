@@ -74,7 +74,7 @@ async def start(event):
  ━━━━━━━━━━━━━━━━━
 - لأنشاء حساب اختر احد البنوك الاتية
 
-- .انشاء حساب تلي جود
+- .انشاء حساب جافا
 
 - .انشاء حساب مصر
  ━━━━━━━━━━━━━━━━━
@@ -131,7 +131,7 @@ async def ga(message):
         help = """
 •| قائمة المساعدة |•
 .انشاء حساب (لانشاء حساب مصرفي)
-- مثال: .انشاء حساب مصر او تلي جود
+- مثال: .انشاء حساب مصر او جافا
 1- .استثمار (مبلغ) 
 - مثال : استثمار 18276
 2- .حظ (المبلغ)
@@ -319,11 +319,11 @@ async def bankar(message):
     mee = await message.client.get_me()
     if get_bank(mee.id) is not None:
         return await edit_or_reply(message, f"<strong>عندك حساب بنكي مينفعش تعمل تاني</strong>",parse_mode="html")
-    if input == "تلي جود":
-        bankn = "بنك تلي جود"
+    if input == "جافا":
+        bankn = "بنك جافا"
     elif input == "مصر":
     	bankn = "بنك مصر"
-    elif input != "مصر" or "تلي جود":
+    elif input != "مصر" or "جافا":
          return await edit_or_reply(message, "مفيش بنك بالاسم دا !")
     add_bank(mee.id, mee.first_name, 50, bankn)
     cbs = await edit_or_reply(message,f"<strong>عملنالك حساب في البنك معلوماته اهي:\nاسم صاحب الحساب:{mee.first_name}|\nايدي الحساب:{mee.id}|\nاسم البنك:{bankn}|\nفلوس حسابك:50$</strong>", parse_mode="html")

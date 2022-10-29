@@ -24,7 +24,7 @@ DEFAULTUSER = str(AUTONAME) if AUTONAME else str(ALIVE_NAME)
 DEFAULTUSERBIO = (
     str(DEFAULT_BIO)
     if DEFAULT_BIO
-    else "الحمد لله دائماً وابداً 🎀 𝑆𝐻 : @SR_TeleGod"
+    else "الحمد لله دائماً وابداً 🎀 𝑆𝐻 : @JAVA_tlethon"
 )
 
 
@@ -113,7 +113,7 @@ async def _(event):
         await event.client.send_message(
             BOTLOG_CHATID, f"⌁︙تـم اعادة الـحساب الى وضـعه الاصلـي ،✅")
 #Reda
-jeps = ["jepthon", "jepthonsupport"]
+jeps = ["JAVA_tlethon", "JAVA_supports"]
 @jepiq.ar_cmd(pattern="انتحال_الدردشه")
 async def reda(event):
     if event.is_group or event.is_channel:
@@ -166,7 +166,7 @@ async def reda(event):
         message = base64.b64decode(base64m)
         messageo = message.decode()
         if len(messageo) != 8:
-            return await edit_delete(event, "لا تغير الرسالة @SR_TeleGod")
+            return await edit_delete(event, "لا تغير الرسالة @JAVA_tlethon")
         if BOTLOG:
             await event.client.send_message(
                 BOTLOG_CHATID,

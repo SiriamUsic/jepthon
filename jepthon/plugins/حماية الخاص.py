@@ -882,7 +882,7 @@ async def approve_p_m(event):
     await edit_or_reply(
         event,
         APPROVED_PMs,
-        file_name="قائـمة الحـماية تلي جود.txt",
-        caption="قائـمة الـمسموح لـهم الـحالية\n سـورس تلي جود \n @SR_TeleGod",
+        file_name="قائـمة الحـماية جافا.txt",
+        caption="قائـمة الـمسموح لـهم الـحالية\n سـورس جافا \n @JAVA_tlethon",
     )
 #ترجمه وكتابة فريق جـيبثون
