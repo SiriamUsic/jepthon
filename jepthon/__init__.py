@@ -22,7 +22,7 @@ JEPVERSION = "3.1.3"
 
 
 if Config.UPSTREAM_REPO == "SiriamUsic":
-    UPSTREAM_REPO_URL = "https://github.com/SiriamUsic/jepthon
+    UPSTREAM_REPO_URL = "https://github.com/SiriamUsic/jepthon"
 else:
     UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
 
