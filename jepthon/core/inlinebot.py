@@ -53,10 +53,10 @@ def ibuild_keyboard(buttons):
 
 
 def main_menu():
-    text = f"**- [سـورس جـافـا](https://t.me/JAVA_tlethon)\
+    text = f"**- [سـورس دايموند](https://t.me/S_U_J)\
         \n المسـاعد\
         \n\
-        \n◽ جـافـا لـ {mention}**"
+        \n◽ دايموند لـ {mention}**"
     buttons = [
         (Button.inline("ℹ️ • التعليمات •", data="check"),),
         (
@@ -228,7 +228,7 @@ async def inline_handler(event):  # sourcery no-metrics
             buttons = [
                 (
                     Button.inline("الحـالة ⚒️", data="stats"),
-                    Button.url(" JaVa UsᴇʀBoᴛ", "https://t.me/JAVA_tlethon"),
+                    Button.url(" Diamond UsᴇʀBoᴛ", "https://t.me/S_U_J"),
                 )
             ]
             ALIVE_PIC = gvarstatus("ALIVE_PIC")
@@ -336,7 +336,7 @@ async def inline_handler(event):  # sourcery no-metrics
 
             buttons = [Button.inline("عـرض الـرسـالة 🔐", data=f"troll_{timestamp}")]
             result = builder.article(
-                title="رسـالة تـرول من سـورس جافا 🧸♥",
+                title="رسـالة تـرول من سـورس دايموند 🧸♥",
                 text=f"فقـط {razan} هـو مـن يستـطيع مشـاهدتهـا !",
                 buttons=buttons,
             )
@@ -386,7 +386,7 @@ async def inline_handler(event):  # sourcery no-metrics
 
             buttons = [Button.inline("عـرض الـرسـالة 🔐", data=f"rzan_{timestamp}")]
             result = builder.article(
-                title="همسـة سـرية من سـورس جـافـا 🧸♥",
+                title="همسـة سـرية من سـورس دايموند 🧸♥",
                 text=f"فقـط {razan} هـو مـن يستـطيع مشـاهدتهـا !",
                 buttons=buttons,
             )
@@ -409,7 +409,7 @@ async def inline_handler(event):  # sourcery no-metrics
 
             buttons = [Button.inline("قراءة الـرسالـة ", data=f"hide_{timestamp}")]
             result = builder.article(
-                title="رسـالة مخفيـة من سـورس جـافـا 🧸♥",
+                title="رسـالة مخفيـة من سـورس دايموند 🧸♥",
                 text=f"✖✖✖",
                 buttons=buttons,
             )
@@ -422,8 +422,8 @@ async def inline_handler(event):  # sourcery no-metrics
         elif string == "help":
             _result = main_menu()
             result = builder.article(
-                title="© jepthon Help",
-                description="Help menu for jepthon",
+                title="© Diamond Help",
+                description="Help menu for Diamond ",
                 text=_result[0],
                 buttons=_result[1],
                 link_preview=False,
@@ -447,7 +447,7 @@ async def inline_handler(event):  # sourcery no-metrics
                             data=f"ytdl_next_{key_}_1",
                         ),
                         Button.inline(
-                            "📜  اظهار القائمة",
+                            "📜  اضهار القائمة",
                             data=f"ytdl_listall_{key_}_1",
                         ),
                         Button.inline(
@@ -559,10 +559,10 @@ async def inline_handler(event):  # sourcery no-metrics
     else:
         buttons = [
             (
-                Button.url("قنـاة السـورس ⚒️", "https://t.me/JAVA_tlethon"),
+                Button.url("قنـاة السـورس ⚒️", "https://t.me/S_U_J"),
                 Button.url(
-                    "مبرمج السورس 📬",
-                    "https://t.me/Salah_officiall",
+                    "كـروب المـساعدة 📬",
+                    "https://t.me/dimond_h",
                 ),
             )
         ]
@@ -571,20 +571,20 @@ async def inline_handler(event):  # sourcery no-metrics
             url=ROZLOGO, size=0, mime_type="image/jpeg", attributes=[]
         )
         text, msg_entities = await event.client._parse_message_text(
-            "**[بـوت جـافـا 🧸♥](https://t.me/JAVA_tlethon)**\
+            "**[بـوت دايموند 🧸♥](https://t.me/S_U_J)**\
             \n\
-            \n❤ جـافـا هـو بـوت بسـيط يدخـل الـى حسـابك لجعـلك تتحـكم به معـ اوامـر معينـة.\
+            \n❤ دايموند هـو بـوت بسـيط يدخـل الـى حسـابك لجعـلك تتحـكم به معـ اوامـر معينـة.\
             \n\
             \n**اذا كـنت تـرغب بتـنصيـب السـورس عـلى حسـابك ,\
-            \n🐾 تعال الـى [جروب المسـاعدة](https://t.me/JAVA_supports)!**",
+            \n🐾 تعال الـى [جروب المسـاعدة](https://t.me/dimond_h)!**",
             "md",
         )
         result = types.InputBotInlineResult(
             id=str(uuid4()),
             type="photo",
-            title="JAVA 🧸♥",
+            title="jepiq 🧸♥",
             description="ادخـل جروب المسـاعدة",
-            url="https://t.me/JAVA_supports",
+            url="https://t.me/dimond_h",
             thumb=photo,
             content=photo,
             send_message=types.InputBotInlineMessageMediaAuto(
