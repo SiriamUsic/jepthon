@@ -23,7 +23,7 @@ async def _(event):
         except YouBlockedUserError:
             await event.edit("** اولا الغي حظر @SpamBot وحاول مجددا**")
             return
-        await event.edit(f"- {response.message.message}\n @JAVA_tlethon")
+        await event.edit(f"- {response.message.message}\n @jepthon")
 
 
 @jepiq.on(admin_cmd(pattern="الاغنية ?(.*)"))
@@ -81,32 +81,32 @@ async def _(event):
             await geez.edit("**الغي حظر @TempMailBot  و حاول مجددا**")
             return
         await event.edit(
-            f"الايميل الخاص هو `{response.message.message}`\n[ اضغط هنا لرؤية من رسائل الايميل الواردة]({JAVA_tlethon})"
+            f"الايميل الخاص هو `{response.message.message}`\n[ اضغط هنا لرؤية من رسائل الايميل الواردة]({jepthon})"
         )
 @jepiq.on(admin_cmd(outgoing=True, pattern="غنيلي$"))
 async def jepvois(vois):
   rl = random.randint(3,267)
-  url = f"https://t.me/god1nvc/{rl}"
-  await vois.client.send_file(vois.chat_id,url,caption="᯽︙ BY : @JAVA_tlethon 🎀",parse_mode="html")
+  url = f"https://t.me/DwDi1/{rl}"
+  await vois.client.send_file(vois.chat_id,url,caption="᯽︙ BY : @S_U_J 🎀",parse_mode="html")
   await vois.delete()
 
 @jepiq.on(admin_cmd(outgoing=True, pattern="شعر$"))
 async def jepvois(vois):
   rl = random.randint(2,101)
   url = f"https://t.me/L1BBBL/{rl}"
-  await vois.client.send_file(vois.chat_id,url,caption="᯽︙ BY : @JAVA_tlethon 🎀",parse_mode="html")
+  await vois.client.send_file(vois.chat_id,url,caption="᯽︙ BY : @S_U_J 🎀",parse_mode="html")
   await vois.delete()
 @jepiq.on(admin_cmd(outgoing=True, pattern="قران$"))
 async def jepvois(vois):
   rl = random.randint(2,101)
   url = f"https://t.me/QuraanJep/{rl}"
-  await vois.client.send_file(vois.chat_id,url,caption="᯽︙ BY : @JAVA_tlethon 🤲🏻☪️",parse_mode="html")
+  await vois.client.send_file(vois.chat_id,url,caption="᯽︙ BY : @S_U_J 🤲🏻☪️",parse_mode="html")
   await vois.delete()
 @jepiq.on(admin_cmd(outgoing=True, pattern="ثيم$"))
 async def jepThe(theme):
   rl = random.randint(2,510)
   url = f"https://t.me/GSSSD/{rl}"
-  await theme.client.send_file(theme.chat_id,url,caption="᯽︙ THEME BY : @JAVA_tlethon 🎊",parse_mode="html")
+  await theme.client.send_file(theme.chat_id,url,caption="᯽︙ THEME BY : @S_U_J 🎊",parse_mode="html")
   await theme.delete()
 @jepiq.on(admin_cmd(outgoing=True, pattern="لاتغلط$"))
 async def jepmeme(memejep):
@@ -114,7 +114,7 @@ async def jepmeme(memejep):
   url = f"https://t.me/MemeSoundJep/4"
   await memejep.client.send_file(memejep.chat_id,url,caption="",parse_mode="html",reply_to=Jep)
   await memejep.delete()
-@jepiq.on(admin_cmd(outgoing=True, pattern="عيطت$"))
+@jepiq.on(admin_cmd(outgoing=True, pattern="بجيت$"))
 async def jepmeme(memejep):
   Jep = await reply_id(memejep)
   url = f"https://t.me/MemeSoundJep/5"

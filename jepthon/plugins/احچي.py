@@ -18,11 +18,11 @@ plugin_category = "utils"
 
 #لتخمط الملف اذا انته ابن گحبة انسخ وألصق لسورسك وصيح اني مطور الملف متعوب عليه وشغل ايد
 
-@jepiq.ar_cmd(pattern="احكي(?:\s|$)([\s\S]*)",
-               command=("تحويل", plugin_category),
+@jepiq.ar_cmd(pattern="احجي(?:\s|$)([\s\S]*)",
+               command=("احجي", plugin_category),
               )
 async def _(event):
-    "تحويل الصوت الى نص."
+    "تحويل الكلام الى نص."
     
     start = datetime.now()
     input_str = event.pattern_match.group(1)
@@ -42,7 +42,7 @@ async def _(event):
         )
     jepevent = await edit_or_reply(event, "`يجري تنزيل الملف...`")
     oggfi = await event.client.download_media(reply, Config.TEMP_DIR)
-    await jepevent.edit("`يجري تحويل الصوت الى نص....`")
+    await jepevent.edit("`يجري تحويل الكلام الى نص....`")
     r = sr.Recognizer()
     #audio_data = open(required_file_name, "rb").read()
     ogg = oggfi.removesuffix('.ogg')
@@ -62,7 +62,7 @@ async def _(event):
     end = datetime.now()
     ms = (end - start).seconds
     
-    string_to_show = "**بيقول : **`{}`".format(
+    string_to_show = "**يكول : **`{}`".format(
             text
         )
     await jepevent.edit(string_to_show)
@@ -106,7 +106,7 @@ def to_text(pic, api):
         if output:
             return output
         else:
-            return "حدث خطأ في النظام , حاول مجدداً"
+            return "حدث خطأ في النضام , حاول مجدداً"
     finally:
         os.remove(pic)
 

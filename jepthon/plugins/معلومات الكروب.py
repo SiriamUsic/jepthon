@@ -39,7 +39,7 @@ plugin_category = "utils"
             "{tr}المشرفيـن +إسم المستخـدم/معرّف المستخـدم> ✪",
             "{tr}المشرفيـن + في المجموعـة التي تريدهـا> ✪",
         ],
-        "examples": "{tr}المشرفين @khhvvjn",
+        "examples": "{tr}المشرفين @jepiq",
     },
 )
 async def _(event):
@@ -94,7 +94,7 @@ async def _(event):
             "{tr}البوتات + إسم المستخـدم/معرّف المستخـدم> 🝰 ",
             "{tr}البوتات + في المجموعـة التي تريدهـا 🝰 ",
         ],
-        "examples": "{tr}البوتات @khhvvjn",
+        "examples": "{tr}البوتات @jepiq",
     },
 )
 async def _(event):
@@ -186,7 +186,7 @@ async def get_users(show):
             "{tr}المعلومـات <username/userid>",
             "{tr}المعلومـات <in group where you need>",
         ],
-        "examples": "{tr}معلومات @SR_TeleGod",
+        "examples": "{tr}معلومات @JepThon",
     },
 )
 async def info(event):

@@ -116,8 +116,8 @@ async def stats(event):  # sourcery no-metrics
     await cat.edit(response)
         
 @jepiq.ar_cmd(
-    pattern="جروباته(?:\s|$)([\s\S]*)",
-    command=("جروباته", plugin_category),
+    pattern="كروباته(?:\s|$)([\s\S]*)",
+    command=("كروباته", plugin_category),
     info={
         "header": "To get list of public groups of repled person or mentioned person.",
         "usage": "{tr}ustat <reply/userid/username>",
@@ -203,7 +203,7 @@ async def stats(event):
             caption=caption,
         )
 
-@jepiq.on(admin_cmd(pattern="قائمه (جميع المجموعات|مجموعات اديرها|جروباتي)$"))
+@jepiq.on(admin_cmd(pattern="قائمه (جميع المجموعات|مجموعات اديرها|كروباتي)$"))
 async def stats(event):  # sourcery no-metrics
     catcmd = event.pattern_match.group(1)
     catevent = await edit_or_reply(event, STAT_INDICATION)
@@ -238,7 +238,7 @@ async def stats(event):  # sourcery no-metrics
         for k, i in enumerate(higa, start=1):
             output += f"{k} .) [{i[0]}](https://t.me/c/{i[1]}/1)\n"
         caption = GROUPS_ADMINSTR
-    elif catcmd == "جروباتي":
+    elif catcmd == "كروباتي":
         output = GROUPS_OWNERSTR
         for k, i in enumerate(higo, start=1):
             output += f"{k} .) [{i[0]}](https://t.me/c/{i[1]}/1)\n"

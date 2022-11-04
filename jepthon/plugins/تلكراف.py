@@ -56,16 +56,16 @@ def resize_image(image):
 )  # sourcery no-metrics
 async def _(event):
     "To get telegraph link."
-    jmevent = await edit_or_reply(event, "` ⌔︙جـار انشـاء رابـط تلجـراف`")
+    jmevent = await edit_or_reply(event, "` ⌔︙جـار انشـاء رابـط تلكـراف`")
     if BOTLOG:
         await event.client.send_message(
             BOTLOG_CHATID,
-            f" ⌔︙انـشاء حسـاب تلجـراف جـديد {auth_url} لـهذه الجلـسة. \n**لا تعـطي هـذا الرابـط لاي احـد, حـتى لو قـالو انـهم مـن شـركة التـلجرام!**",
+            f" ⌔︙انـشاء حسـاب تلكـراف جـديد {auth_url} لـهذه الجلـسة. \n**لا تعـطي هـذا الرابـط لاي احـد, حـتى لو قـالو انـهم مـن شـركة التـلكـرام!**",
         )
     optional_title = event.pattern_match.group(5)
     if not event.reply_to_msg_id:
         return await jmevent.edit(
-            "` ⌔︙قـم بالـرد عـلى هـذه الرسـالة للحـصول عـلى رابـط تلجراف فـورا`",
+            "` ⌔︙قـم بالـرد عـلى هـذه الرسـالة للحـصول عـلى رابـط تلكـراف فـورا`",
         )
 
     start = datetime.now()

@@ -224,7 +224,7 @@ async def remove_profilepic(delpfp):
     ]
     await delpfp.client(DeletePhotosRequest(id=input_photos))
     await edit_delete(
-        delpfp, f"᯽︙ تـم حذف {len(input_photos)} من صور حسابك بنجاح ✅"
+        delpfp, f"᯽︙ تـم الحذف {len(input_photos)} من صور حسابك بنجاح ✅"
     )
 
 

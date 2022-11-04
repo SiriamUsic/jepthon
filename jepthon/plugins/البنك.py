@@ -18,8 +18,8 @@ from . import mention
 
 plugin_category = "utils"
 
-#كتـابة وتعـديل:  @lMl10l
-@jepiq.on(admin_cmd(pattern=f"بينج(?:\s|$)([\s\S]*)"))
+
+@jepiq.on(admin_cmd(pattern=f"بنك(?:\s|$)([\s\S]*)"))
     
 async def amireallyalive(event):
     "للتـأكد من ان البـوت يعـمـل"
@@ -29,8 +29,8 @@ async def amireallyalive(event):
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     EMOJI = gvarstatus("ALIVE_EMOJI") or "✇ ◅"
-    PING_TEXT = gvarstatus("PING_TEXT") or "**[ 𝗜 𝗝𝘂𝘀𝘁 𝗔𝘀𝗸𝗲𝗱 𝗙𝗼𝗿 𝗦𝗼𝗺𝗲 𝗣𝗲𝗮𝗰𝗲 🎀 ](t.me/JAVA_tlethon)**"
-    PING_IMG = gvarstatus("PING_PIC") or Config.P_PIC or "https://telegra.ph/file/9870433b0c155ecf2ad07.png"
+    PING_TEXT = gvarstatus("PING_TEXT") or "**[ 𝗜 𝗝𝘂𝘀𝘁 𝗔𝘀𝗸𝗲𝗱 𝗙𝗼𝗿 𝗦𝗼𝗺𝗲 𝗣𝗲𝗮𝗰𝗲 🎀 ](t.me/S_U_J)**"
+    PING_IMG = gvarstatus("PING_PIC") or Config.P_PIC or "https://telegra.ph/file/84d536b5968a8f1b4575f.png"
     jepthon_caption = gvarstatus("PING_TEMPLATE") or temp
     caption = jepthon_caption.format(
         PING_TEXT=PING_TEXT,

@@ -1,14 +1,14 @@
-#ترجمه فريق جـيبثون على التيلكرام
+#ترجمه فريق دايـمونـد على الـتلـيجرام
 import json
 
 import requests
-#ترجمه فريق جـيبثون على التيلكرام
+#ترجمه فريق دايـمونـد على الـتلـيجرام
 from ..sql_helper.globals import gvarstatus
 from . import jepiq, edit_delete, edit_or_reply
 
 plugin_category = "extra"
 
-#ترجمه فريق جـيبثون على التيلكرام
+#ترجمه فريق دايـمونـد على الـتلـيجرام
 @jepiq.ar_cmd(
     pattern="صلاة(?: |$)(.*)",
     command=("صلاة", plugin_category),
@@ -25,8 +25,8 @@ async def get_adzan(adzan):
     request = requests.get(url)
     if request.status_code != 200:
         await edit_delete(
-            adzan, f"** لم يـتم العثور على معلومات لـهذه المدينه {LOKASI}**\n يرجى كتابة اسم محافظتك وباللغه الانجليزي ", 5
-        ) #ترجمه فريق جـيبثون على التيلكرام
+            adzan, f"** لم يـتم العثور على معلومات لـهذه المدينه {LOKASI}**\n يرجى كتابة اسم محافظتك وباللغه الانكليزي ", 5
+        ) #ترجمه فريق دايـمونـد على الـتلـيجرام
         return
     result = json.loads(request.text)
     jepiqresult = f"<b>اوقـات صـلاه المـسلمين 👳‍♂️ </b>\
@@ -46,5 +46,4 @@ async def get_adzan(adzan):
     "
     await edit_or_reply(adzan, jepiqresult, "html")
 
-# Copyright (C) 2021 JepThon TEAM
-# FILES WRITTEN BY  @lMl10l
+# Copyright (C) 2022 Diamond TEAM

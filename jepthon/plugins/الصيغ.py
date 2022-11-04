@@ -27,9 +27,9 @@ PATH = os.path.join("./temp", "temp_vid.mp4")
 
 thumb_loc = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, "thumb_image.jpg")
 
-#Copyright  By  @JepThon  © 2021
-#WRITE BY  @lMl10l  
-#Edited By Reda 
+#Copyright  By  @S_U_J  © 2021
+#WRITE BY  @S_U_J  
+#Edited By Salah
 @jepiq.ar_cmd(
     pattern="تحويل صورة$",
     command=("تحويل صورة", plugin_category),
@@ -197,8 +197,7 @@ async def _(event):
             os.remove(new_required_file_name)
             await event.delete()
             
-#Copyright  By  @JepThon  © 2021
-#WRITE BY  @lMl10l
+# Copyright (C) 2022 Diamond TEAM
 
 @jepiq.ar_cmd(
     pattern="تحويل متحركة ?([0-9.]+)?$",

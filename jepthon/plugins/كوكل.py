@@ -64,8 +64,8 @@ async def scam(results, lim):
 
 
 @jepiq.ar_cmd(
-    pattern="جوجل بحث ([\s\S]*)",
-    command=("جوجل بحث", plugin_category),
+    pattern="كوكل بحث ([\s\S]*)",
+    command=("كوكل بحث", plugin_category),
     info={
         "header": "Google search command.",
         "flags": {
@@ -223,13 +223,13 @@ async def _(event):
 
 
 @jepiq.ar_cmd(
-    pattern="جوجل(?:\s|$)([\s\S]*)",
-    command=("جوجل", plugin_category),
+    pattern="كوكل(?:\s|$)([\s\S]*)",
+    command=("كوكل", plugin_category),
     info={
         "header": "To get link for google search",
         "description": "Will show google search link as button instead of google search results try {tr}gs for google search results.",
         "usage": [
-            "{tr}جوجل",
+            "{tr}كوكل",
         ],
     },
 )

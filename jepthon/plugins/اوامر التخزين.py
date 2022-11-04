@@ -84,7 +84,7 @@ async def log_tagged_messages(event):
     except Exception as e:
         LOGS.info(str(e))
     messaget = media_type(event)
-    resalt = f"#التــاكــات\n\n<b>⌔┊الجروب : </b><code>{hmm.title}</code>"
+    resalt = f"#التــاكــات\n\n<b>⌔┊الكــروب : </b><code>{hmm.title}</code>"
     if full is not None:
         resalt += (
             f"\n\n<b>⌔┊المـرسـل : </b> {_format.htmlmentionuser(full.first_name , full.id)}"
@@ -124,9 +124,9 @@ async def log(log_text):
             textx = user + log_text.pattern_match.group(1)
             await log_text.client.send_message(Config.PM_LOGGER_GROUP_ID, textx)
         else:
-            await log_text.edit("**⌔┊بالــرد على اي رسـاله لحفظهـا في جروب التخــزين**")
+            await log_text.edit("**⌔┊بالــرد على اي رسـاله لحفظهـا في كـروب التخــزين**")
             return
-        await log_text.edit("**⌔┊تـم الحفـظ في جـروب التخـزين .. بنجـاح ✓**")
+        await log_text.edit("**⌔┊تـم الحفـظ في كـروب التخـزين .. بنجـاح ✓**")
     else:
         await log_text.edit("**⌔┊عـذراً .. هـذا الامـر يتطلـب تفعيـل فـار التخـزين اولاً**")
     await asyncio.sleep(2)
@@ -211,8 +211,8 @@ async def set_pmlog(event):
 
 
 @jepiq.ar_cmd(
-    pattern="تخزين الجروبات (تشغيل|ايقاف)$",
-    command=("تخزين الجروبات", plugin_category),
+    pattern="تخزين الكروبات (تشغيل|ايقاف)$",
+    command=("تخزين الكروبات", plugin_category),
     info={
         "header": "To turn on or turn off group tags logging in pmlogger group.",
         "description": "Set PM_LOGGER_GROUP_ID in vars to work this",
@@ -223,7 +223,7 @@ async def set_pmlog(event):
     },
 )
 async def set_grplog(event):
-    "لتشغـيل او ايقـاف تخـزين رسائل الجروبات"
+    "لتشغـيل او ايقـاف تخـزين رسائل الكروبات"
     input_str = event.pattern_match.group(1)
     if input_str == "ايقاف":
         h_type = False
@@ -235,12 +235,12 @@ async def set_grplog(event):
         GRPLOG = True
     if GRPLOG:
         if h_type:
-            await event.edit("**᯽︙  تـخزين رسـائل الجروبات بالفـعل مُمكـنة ✅**")
+            await event.edit("**᯽︙  تـخزين رسـائل الكروبات بالفـعل مُمكـنة ✅**")
         else:
             addgvar("GRPLOG", h_type)
-            await event.edit("**᯽︙  تـم تعـطيل تخـزين رسائل الجروبات بنـجاح ✅**")
+            await event.edit("**᯽︙  تـم تعـطيل تخـزين رسائل الكروبات بنـجاح ✅**")
     elif h_type:
         addgvar("GRPLOG", h_type)
-        await event.edit("**᯽︙  تـم تفعيل تخـزين رسائل الجروبات بنـجاح ✅**")
+        await event.edit("**᯽︙  تـم تفعيل تخـزين رسائل الكروبات بنـجاح ✅**")
     else:
-        await event.edit("**᯽︙  تـخزين رسـائل الجروبات بالفـعل معـطلة ✅**")
+        await event.edit("**᯽︙  تـخزين رسـائل الكروبات بالفـعل معـطلة ✅**")
