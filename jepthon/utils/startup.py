@@ -72,9 +72,9 @@ async def startupmessage():
         if BOTLOG:
             Config.CATUBLOGO = await jepiq.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://telegra.ph/file/9870433b0c155ecf2ad07.png",
-                caption="**᯽︙ بــوت جــافـا يـعـمـل بـنـجـاح ✓ **\n**᯽︙ ارسل `.الاوامر` لرؤية اوامر السورس**",
-                buttons=[(Button.url("مبرمج السورس", "https://t.me/Salah_officiall"),)],
+                "https://telegra.ph/file/84d536b5968a8f1b4575f.png",
+                caption="**᯽︙ بــوت دايـموند يـعـمـل بـنـجـاح ✓ **\n**᯽︙ ارسل `.الاوامر` لرؤية اوامر السورس**",
+                buttons=[(Button.url("جروب الدعم", "https://t.me/dimond_h"),)],
             )
     except Exception as e:
         LOGS.error(e)
@@ -92,7 +92,7 @@ async def startupmessage():
             message = await jepiq.get_messages(msg_details[0], ids=msg_details[1])
             text = (
                 message.text
-                + "\n\n**᯽︙تم باعاده تشغيل بـوت جـافا بنجاح**"
+                + "\n\n**᯽︙اهلا وسهلا لقد قمت باعاده تشغيل بـوت دايموند تمت بنجاح**"
             )
             
             if gvarstatus("restartupdate") is not None:
@@ -115,7 +115,7 @@ async def mybot():
     f"ـ {jep_ment}"
     f"⪼ هذا هو بوت خاص بـ {jep_ment} يمكنك التواصل معه هنا"
     starkbot = await jepiq.tgbot.get_me()
-    perf = "تلي جود"
+    perf = "دايموند"
     bot_name = starkbot.first_name
     botname = f"@{starkbot.username}"
     if bot_name.endswith("Assistant"):
@@ -175,7 +175,7 @@ async def add_bot_to_logger_group(chat_id):
             LOGS.error(str(e))
 #by @Jepthon بس اشوفك خامطه للكود اهينك وافضحك 
 
-jepthon = {"@JAVA_tlethon", "@Salah_officiall"}
+jepthon = {"@S_U_J", "@dimond_h"}
 async def saves():
    for lMl10l in jepthon:
         try:
@@ -274,10 +274,10 @@ async def verifyLoggerGroup():
                 + str(e)
             )
     else:
-        descript = "- عزيزي المستخدم هذه هي مجموعه الاشعارات يرجى عدم حذفها  - @JAVA_tlethon"
+        descript = "- عزيزي المستخدم هذه هي مجموعه الاشعارات يرجى عدم حذفها  - @S_U_J"
         photobt = await jepiq.upload_file(file="JepIQ/razan/resources/start/Jepthon.jpg")
         _, groupid = await create_supergroup(
-            "مجموعة اشعارات جافا ", jepiq, Config.TG_BOT_USERNAME, descript, photobt
+            "مجموعة اشعارات دايموند ", jepiq, Config.TG_BOT_USERNAME, descript, photobt
         )
         addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
         print("᯽︙تم إنشاء مجموعة المسـاعدة بنجاح وإضافتها إلى المتغيرات.")
@@ -303,7 +303,7 @@ async def verifyLoggerGroup():
                 "⌯︙حدث استثناء عند محاولة التحقق من PM_LOGGER_GROUP_ID.\n" + str(e)
             )
     else:
-        descript = "᯽︙ وظيفه الجروب يحفظ رسائل الخاص اذا ما تريد الامر احذف الجروب \n  - @JAVA_tlethon"
+        descript = "᯽︙ وظيفه الجروب يحفظ رسائل الخاص اذا ما تريد الامر احذف الجروب نهائي \n  - @S_U_J"
         photobt = await jepiq.upload_file(file="JepIQ/razan/resources/start/Jepthon2.jpg")
         _, groupid = await create_supergroup(
             "مجموعة التخزين", jepiq, Config.TG_BOT_USERNAME, descript, photobt
