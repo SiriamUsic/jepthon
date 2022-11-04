@@ -1,15 +1,15 @@
-# WRITE  BY S_U_J
-# PLUGIN FOR S_U_J 
-# @S_U_J
+# WRITE  BY JEPTHON
+# PLUGIN FOR JepThon 
+# @JepThon
 
 from telethon import events
 import random, re
 from ..Config import Config
 
-from S_U_J.utils import admin_cmd
+from jepthon.utils import admin_cmd
 
 import asyncio
-from S_U_J import jepiq
+from jepthon import jepiq
 from random import choice
 
 from ..core.managers import edit_or_reply
@@ -64,7 +64,7 @@ async def _(event):
 async def _(event):
 	if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
 		await event.edit(
-		"** قائمة اوامر المجـموعه لسورس دايموند **:\n ★•┉ ┉ ┉ ┉ ┉ ┉  ┉ ┉ ┉ ┉•★\n ᯽︙ اختر احدى هذه القوائم\n\n- ( `.اوامر التفليش` )\n- ( `.اوامر المحذوفين` )\n- ( `.اوامر الكروب` )\n★•┉ ┉ ┉ ┉ ┉ ┉  ┉ ┉ ┉ ┉•★\n⌔︙CH : @S_U_J"
+		"** قائمة اوامر المجـموعه لسورس دايـموند **:\n ★•┉ ┉ ┉ ┉ ┉ ┉  ┉ ┉ ┉ ┉•★\n ᯽︙ اختر احدى هذه القوائم\n\n- ( `.اوامر التفليش` )\n- ( `.اوامر المحذوفين` )\n- ( `.اوامر الكروب` )\n★•┉ ┉ ┉ ┉ ┉ ┉  ┉ ┉ ┉ ┉•★\n⌔︙CH : @S_U_J"
 )
 
 @jepiq.ar_cmd(
@@ -132,7 +132,7 @@ async def _(event):
 async def _(event):
 	if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
 		await event.edit(
-		"** قائمة اوامر الفارات والتخصيص **:\n هـنـا  : \n\n@S_U_J2"
+		"** قائمة اوامر الفارات والتخصيص **:\n هـنـا  : \n\n@Jepthon2"
 		)
 
 @jepiq.ar_cmd(
