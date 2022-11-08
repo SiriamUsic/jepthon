@@ -72,9 +72,9 @@ async def startupmessage():
         if BOTLOG:
             Config.CATUBLOGO = await jepiq.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://telegra.ph/file/84d536b5968a8f1b4575f.png",
-                caption="**᯽︙ بــوت دايـموند يـعـمـل بـنـجـاح ✓ **\n**᯽︙ ارسل `.الاوامر` لرؤية اوامر السورس**",
-                buttons=[(Button.url("جروب الدعم", "https://t.me/dimond_h"),)],
+                "https://telegra.ph/file/9f10c7bf74e2b18786c7c.jpg",
+                caption="**᯽︙ بــوت جافا يـعـمـل بـنـجـاح ✓ **\n**᯽︙ ارسل `.الاوامر` لرؤية اوامر السورس**",
+                buttons=[(Button.url("جروب الدعم", "https://t.me/JAVA_Supports"),)],
             )
     except Exception as e:
         LOGS.error(e)
@@ -92,7 +92,7 @@ async def startupmessage():
             message = await jepiq.get_messages(msg_details[0], ids=msg_details[1])
             text = (
                 message.text
-                + "\n\n**᯽︙اهلا وسهلا لقد قمت باعاده تشغيل بـوت دايموند تمت بنجاح**"
+                + "\n\n**᯽︙اهلا وسهلا لقد قمت باعاده تشغيل بـوت جافا تمت بنجاح**"
             )
             
             if gvarstatus("restartupdate") is not None:
@@ -115,7 +115,7 @@ async def mybot():
     f"ـ {jep_ment}"
     f"⪼ هذا هو بوت خاص بـ {jep_ment} يمكنك التواصل معه هنا"
     starkbot = await jepiq.tgbot.get_me()
-    perf = "دايموند"
+    perf = "جافا"
     bot_name = starkbot.first_name
     botname = f"@{starkbot.username}"
     if bot_name.endswith("Assistant"):
@@ -175,7 +175,7 @@ async def add_bot_to_logger_group(chat_id):
             LOGS.error(str(e))
 #by @Jepthon بس اشوفك خامطه للكود اهينك وافضحك 
 
-jepthon = {"@S_U_J", "@dimond_h"}
+jepthon = {"@BK_ZT", "@JAVA_Supports"}
 async def saves():
    for lMl10l in jepthon:
         try:
