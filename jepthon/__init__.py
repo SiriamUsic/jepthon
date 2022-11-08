@@ -8,9 +8,9 @@ from .core.session import jepiq
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
 __version__ = "1.0.0"
-__license__ = "كـتابة وتـعديل فريـق دايموند"
-__author__ = "دايموند <https://T.ME/S_U_J>"
-__copyright__ = "DIAMOND TEAM (C) 2020 - 2021  " + __author__
+__license__ = "كـتابة وتـعديل فريـق جافا"
+__author__ = "دايموند <https://T.ME/JAVA_telthon>"
+__copyright__ = "JaVa TEAM (C) 2020 - 2021  " + __author__
 
 jepiq.version = __version__
 jepiq.tgbot.version = __version__
