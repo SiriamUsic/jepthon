@@ -14,7 +14,7 @@ async def dato(event):
         caption=f"""
 - تـم حفظ الصـورة بنجـاح ✓ 
 - غير مبري الذمه اذا استخدمت الامر للابتزاز
-- CH: @S_U_J
+- CH: @JAVA_telthon
   """,
     )
     await event.delete()
