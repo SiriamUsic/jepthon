@@ -120,7 +120,7 @@ class CatUserBotClient(TelegramClient):
                                   \nwe logged only fact of error and date,\nwe respect your privacy,\
                                   \nyou may not report this error if you've\
                                   \nany confidential data here, no one will see your data\
-                                  \n\n--------BEGIN jepthon TRACEBACK LOG--------\
+                                  \n\n--------BEGIN JAVA TRACEBACK LOG--------\
                                   \nDate: {date}\nGroup ID: {str(check.chat_id)}\
                                   \nSender ID: {str(check.sender_id)}\
                                   \nMessage Link: {await check.client.get_msg_link(check)}\
@@ -131,7 +131,7 @@ class CatUserBotClient(TelegramClient):
                             "error": str(sys.exc_info()[1]),
                             "date": datetime.datetime.now(),
                         }
-                        ftext += "\n\n--------END jepthon TRACEBACK LOG--------"
+                        ftext += "\n\n--------END JAVA TRACEBACK LOG--------"
                         command = 'git log --pretty=format:"%an: %s" -5'
                         ftext += "\n\n\nLast 5 commits:\n"
                         output = (await runcmd(command))[:2]
@@ -140,8 +140,8 @@ class CatUserBotClient(TelegramClient):
                         pastelink = await paste_message(
                             ftext, pastetype="s", markdown=False
                         )
-                        text = "**تقرير خطا جيبثون**\n\n"
-                        link = "[هنا](https://t.me/JepthonSupport)"
+                        text = "**تقرير خطا جافا**\n\n"
+                        link = "[هنا](https://t.me/JAVA_Supports)"
                         text += "إذا كنت تريد يمكنك الإبلاغ عن ذلك"
                         text += f"- فقط قم بإعادة توجيه هذه الرسالة {link}.\n"
                         text += "لا يتم تسجيل اي خطا فقط التاريخ والوقت\n\n"
@@ -235,7 +235,7 @@ class CatUserBotClient(TelegramClient):
                                     \nwe logged only fact of error and date,\nwe respect your privacy,\
                                     \nyou may not report this error if you've\
                                     \nany confidential data here, no one will see your data\
-                                    \n\n--------BEGIN jepthon TRACEBACK LOG--------\
+                                    \n\n--------BEGIN JAVA TRACEBACK LOG--------\
                                     \nDate: {date}\nGroup ID: {str(check.chat_id)}\
                                     \nSender ID: {str(check.sender_id)}\
                                     \nMessage Link: {await check.client.get_msg_link(check)}\
@@ -246,7 +246,7 @@ class CatUserBotClient(TelegramClient):
                             "error": str(sys.exc_info()[1]),
                             "date": datetime.datetime.now(),
                         }
-                        ftext += "\n\n--------END jepthon TRACEBACK LOG--------"
+                        ftext += "\n\n--------END JAVA TRACEBACK LOG--------"
                         command = 'git log --pretty=format:"%an: %s" -5'
                         ftext += "\n\n\nLast 5 commits:\n"
                         output = (await runcmd(command))[:2]
@@ -255,8 +255,8 @@ class CatUserBotClient(TelegramClient):
                         pastelink = await paste_message(
                             ftext, pastetype="s", markdown=False
                         )
-                        text = "**تقرير خطا دايموند**\n\n"
-                        link = "[هنا](https://t.me/dimond_h)"
+                        text = "**تقرير خطا جافا**\n\n"
+                        link = "[هنا](https://t.me/JAVA_Supports)"
                         text += "إذا كنت تريد يمكنك الإبلاغ عن ذلك"
                         text += f"- فقط قم بإعادة توجيه هذه الرسالة {link}.\n"
                         text += "لا يتم تسجيل اي خطا فقط التاريخ والوقت\n\n"
